@@ -1,9 +1,7 @@
 # public-tunnel-local
 
 
-WannaBe ngrok clone written in python.
-
-How to run:
-You host contents in your laptop(in port 80).
-And the daemon.py should be started, that's the one which maintains connection between your laptop and the public server
-Run server.py in your public server. 
+Run server.py in your server which has a public connection (Example: melii.club or 123.45.67.89)
+Now visit <your server domain>/addThis@<the domain you want> (Example: melii.club/addThis@myLocalhost) which will give you a random number
+Replace the port number in your client.py with that random number and start your client.py and you are good to go.
+Now your localhost(only port 80) can be accecssed globally via <your server domain>/<domain you wanted> (Example: melii.club/myLocalHost)
