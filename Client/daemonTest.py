@@ -2,7 +2,7 @@ import socket
 import urllib2
 
 host = '139.59.82.146'
-port = 10034
+port = 34341
 buf = 1024
 
 clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,7 +29,7 @@ while 1:
 		request = urllib2.urlopen("http://localhost/")
 		content = request.read()
 		print content
-		result = "HTTP/1.0 " + str(request.code) + " OK"
+		result = "AnotherText"
 		result = result + str(request.info())
 		# print request.info()
 		# for item in request.info():

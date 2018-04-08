@@ -2,11 +2,12 @@ import socket
 import urllib2
 
 host = '139.59.82.146'
-port = 10034
+port = 10032
 buf = 1024
 
 clientsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clientsocket.connect((host, port))
+clientsocket.send("a")
 
 #to send data
 # print "Sending 'test1\\n'"
