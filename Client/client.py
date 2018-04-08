@@ -4,8 +4,8 @@ import re
 import urllib2
 
 # Standard socket stuff:
-host = '' # do we need socket.gethostname() ?
-port = 9002
+host = '139.59.82.146' # do we need socket.gethostname() ?
+port = 9014
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind((host, port))
 sock.listen(1) # don't queue up any requests
@@ -18,6 +18,9 @@ while True:
         print "Connection from: " + `caddr`
         req = csock.recv(1024) # get the request, 1kB max
         print req
+        if req != "a":
+            print "failed"
+            continue
         request = urllib2.urlopen("http://files.melii.club")
         content = request.read()
         print content
