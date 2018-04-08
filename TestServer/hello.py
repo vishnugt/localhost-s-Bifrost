@@ -1,8 +1,9 @@
 from flask import Flask
-
+ 
 app = Flask(__name__)
-
-print("hi")
+ 
 @app.route('/')
-def hello():
-        return 'Hello2, World!'
+def helloIndex():
+    return 'World Hello!'
+ 
+app.run(host='0.0.0.0', port= 80)
